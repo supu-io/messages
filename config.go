@@ -21,8 +21,7 @@ type GetIssuesList struct {
 
 // IssuesDetails request message to get an issue
 type GetIssue struct {
-	ID     string `json:"id"`
-	Status string `json:"status"`
+	Issue  *Issue `json:"issue"`
 	Config `json:"config"`
 }
 
