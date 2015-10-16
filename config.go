@@ -38,3 +38,10 @@ type Setup struct {
 	States []string `json:"states"`
 	Config `json:"config"`
 }
+
+// UpdateIssue request message to update an issue
+type UpdateIssue struct {
+	Issue  *Issue `json:issue`
+	Status string `json:"state"`
+	Config `json:"config"`
+}
