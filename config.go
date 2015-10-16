@@ -30,3 +30,11 @@ type CreateIssue struct {
 	Issue  *Issue `json:issue`
 	Config `json:"config"`
 }
+
+// Setup request message to setup issue tracker
+type Setup struct {
+	Org    string   `json:"org"`
+	Repo   string   `json:"repo"`
+	States []string `json:"states"`
+	Config `json:"config"`
+}
