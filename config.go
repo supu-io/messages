@@ -41,7 +41,15 @@ type Setup struct {
 
 // UpdateIssue request message to update an issue
 type UpdateIssue struct {
-	Issue  *Issue `json:issue`
-	Status string `json:"state"`
-	Config `json:"config"`
+	Issue    *Issue `json:issue`
+	Status   string `json:"state"`
+	Config   `json:"config"`
+	Workflow *[]Transition `json:"transitions"`
+}
+
+// Transition json representation
+type Transition struct {
+	From  string   `json:"from"`
+	To    string   `json:"to"`
+	Hooks []string `json:"hooks"`
 }
