@@ -44,7 +44,12 @@ type UpdateIssue struct {
 	Issue    *Issue `json:issue`
 	Status   string `json:"state"`
 	Config   `json:"config"`
-	Workflow *[]Transition `json:"transitions"`
+	Workflow `json:"workflow"`
+}
+
+// Workflow ...
+type Workflow struct {
+	Transitions []Transition `json:"transitions"`
 }
 
 // Transition json representation
