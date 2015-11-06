@@ -54,7 +54,11 @@ type Workflow struct {
 
 // Transition json representation
 type Transition struct {
-	From  string   `json:"from"`
-	To    string   `json:"to"`
-	Hooks []string `json:"hooks"`
+	From  string `json:"from"`
+	To    string `json:"to"`
+	Hooks []Hook `json:"hooks"`
+}
+
+type Hook struct {
+	URL string `json:"url"`
 }
